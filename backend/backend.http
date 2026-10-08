@@ -1,0 +1,9 @@
+@backend_HostAddress = http://localhost:5025
+
+GET {{backend_HostAddress}}/api/v1/getCount/
+
+POST {{backend_HostAddress}}/api/v1/increment/
+
+POST {{backend_HostAddress}}/api/v1/refresh/
+
+###

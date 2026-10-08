@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "raj780PxdDo=",
+  "success": true,
+  "projectFilePath": "/Users/said/PersonalResume/backend/backend.csproj",
+  "expectedPackageFiles": [
+    "/Users/said/.nuget/packages/npgsql/10.0.3/npgsql.10.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
