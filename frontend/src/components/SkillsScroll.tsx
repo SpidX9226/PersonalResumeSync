@@ -5,10 +5,10 @@ export default function SkillsScroll({ img_path, title, desc }: Skill) {
         <div className="row">
             <div className="row__content">
                 <a className="skill">
-                    <img src={img_path} alt={title} />
-                    <div className="skill-info">
-                        <span className="title">{title}</span>
-                        { desc && <span className="desc">{desc}</span> }
+                    <img className="skill__image" src={img_path} alt={title} />
+                    <div className="skill__info">
+                        <span className="skill__title">{title}</span>
+                        { desc && <span className="skill__desc">{desc}</span> }
                     </div>
                 </a>
             </div>
