@@ -1,0 +1,38 @@
+.hero {
+  height: calc(100vh - 73px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+
+  &__title {
+    line-height: 1.2;
+  }
+
+  &__eyebrow {
+    color: var(--accent)
+  }
+
+  &__name {
+    font-size: 3rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    justify-content: center;
+  }
+
+  &__link {
+
+    gap: 5px;
+
+    color: var(--muted);
+    text-decoration: none;
+  }
+}
