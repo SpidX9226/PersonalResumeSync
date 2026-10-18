@@ -1,25 +1,28 @@
 import "./About.scss"
+import Reveal from "../Reveal.tsx";
 
 export default function About() {
     return (
         <section id="about" className="section">
             <div className="container">
 
-            <p className="section__label">01 / ABOUT</p>
-            <h2 className="section__title">Обо мне</h2>
+            <Reveal as="p" className="section__label" >01 / ABOUT</Reveal>
+            <Reveal as="h2" className="section__title">Обо мне</Reveal>
 
             <div className="about__content">
-                <p>
+
+                <Reveal as="p" delay={0.4}>
                     Я разработчик, интересующийся backend-разработкой,
                     архитектурой программного обеспечения и созданием
                     высоконагруженных сервисов.
-                </p>
+                </Reveal>
 
-                <p>
+                <Reveal as="p" delay={0.4}>
                     Мне нравится разбираться в сложных системах,
                     изучать новые технологии и писать простой,
                     понятный и поддерживаемый код.
-                </p>
+                </Reveal>
+
             </div>
 
             </div>

@@ -1,4 +1,4 @@
-:root, [data-theme="dark"] {
+ :root, [data-theme="dark"] {
   color-scheme: dark;
 
   --background: #0b0d10;
@@ -11,6 +11,21 @@
   --accent-hover: #94a0ff;
 
   --header-color: rgba(11, 13, 16, 0.85);
+}
+
+[data-theme="apple-dark"] {
+  color-scheme: dark;
+
+  --background: #000;
+  --surface: #1c1c1e;
+  --surface-hover: #3a3a3c;
+  --border: #1c1c1e;
+  --text: #fff;
+  --muted: #9d9da5;
+  --accent: rgb(109, 124, 255);
+  --accent-hover: rgb(167, 170, 255);
+
+  --header-color: rgba(0, 0, 0, 0.85);
 }
 
 [data-theme="light"] {

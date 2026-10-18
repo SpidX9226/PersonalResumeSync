@@ -35,7 +35,8 @@
   margin-right: var(--sidebar-width);
   // Total scroll length. The pinned part lasts about 80vh, which is the
   // distance the content takes to dissolve.
-  height: 180vh;
+  // height: 180vh;   // ← Remove this
+  height: 100vh;      // ← Use the viewport height instead
 
   &__sticky {
     position: sticky;

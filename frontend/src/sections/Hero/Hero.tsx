@@ -2,7 +2,7 @@ import "./Hero.scss"
 
 export default function Hero() {
     return (
-        <section className="hero">
+        <section id="hero" className="section">
             <div className="hero__content container">
                 <p className="hero__eyebrow">hello! i'm</p>
                 <h1 className="hero__name">Said <span className="hero__name__accent">Makhov</span></h1>

@@ -1,33 +1,32 @@
 import "./Sidebar.scss"
+import {useActiveSection} from "../../hooks/useActiveSection.ts";
+
+const navLinks = [
+    { id: "about", label: "Обо мне" },
+    { id: "skills", label: "Навыки" },
+    { id: "projects", label: "Проекты" },
+    { id: "experience", label: "Опыт" },
+    { id: "contact", label: "Контакты" }
+];
 
 export default function Sidebar() {
+    const activeSection = useActiveSection();
+
     return (
         <aside className="sidebar">
             <nav className="sidebar__nav">
-                <a href="#about" className="sidebar__link sidebar__link--active">
-                    <span className="sidebar__dot"></span>
-                    Обо мне
-                </a>
+                {
+                    navLinks.map(({ id, label }) => {
+                        const isActive = id === activeSection;
 
-                <a href="#skills" className="sidebar__link">
-                    <span className="sidebar__dot"></span>
-                    Навыки
-                </a>
-
-                <a href="#projects" className="sidebar__link">
-                    <span className="sidebar__dot"></span>
-                    Проекты
-                </a>
-
-                <a href="#experience" className="sidebar__link">
-                    <span className="sidebar__dot"></span>
-                    Опыт
-                </a>
-
-                <a href="#contact" className="sidebar__link">
-                    <span className="sidebar__dot"></span>
-                    Контакты
-                </a>
+                        return (
+                            <a key={id} href={`#${id}`} className={`sidebar__link ${isActive ? "active" : ""}`}>
+                                <span className="sidebar__dot"></span>
+                                {label}
+                            </a>
+                        )
+                    })
+                }
             </nav>
         </aside>
     );

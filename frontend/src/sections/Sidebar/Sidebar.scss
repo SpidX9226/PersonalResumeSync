@@ -37,7 +37,7 @@
     background-color: var(--surface);
   }
 
-  .sidebar__link--active {
+  &.sidebar__link active {
     color: var(--accent);
   }
 
@@ -56,8 +56,12 @@
     .sidebar__link:hover & {
     }
 
-    .sidebar__link--active & {
+    .sidebar__link.active & {
       background-color: var(--accent);
     }
   }
+}
+
+.sidebar__link.active {
+  color: var(--accent);
 }
