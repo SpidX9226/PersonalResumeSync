@@ -29,7 +29,7 @@ interface Profile {
     name: string
     role: string
     description: string
-    status?: string // e.g. "open to work": shows a small badge above the name
+    status?: string
     cta: HeroLink
     links: HeroLink[]
 }
