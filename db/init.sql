@@ -1,8 +1,5 @@
-CREATE TABLE IF NOT EXISTS button_counter(
-    id SERIAL PRIMARY KEY,
-    count NUMERIC(20, 0) NOT NULL
+CREATE TABLE IF NOT EXISTS unique_visits (
+    user_id UUID PRIMARY KEY,
+    first_visit TIMESTAMPTZ NOT NULL,
+    last_visit TIMESTAMPTZ NOT NULL
 );
-
-INSERT INTO button_counter (
-    count
-) VALUES ( 0 )
