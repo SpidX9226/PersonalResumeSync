@@ -42,3 +42,18 @@
 
   --header-color: rgba(247, 248, 250, 0.85);;
 }
+
+[data-theme="apple-light"] {
+   color-scheme: light;
+
+   --background: #efeff4;
+   --surface: #fffffe;
+   --surface-hover: #eef0f4;
+   --border: #eef0f4;
+   --text: #000000;
+   --muted: #8b8a8e;
+   --accent: rgb(255, 214, 0);
+   --accent-hover: rgb(161, 106, 0);
+
+   --header-color: rgba(247, 248, 250, 0.85);;
+ }

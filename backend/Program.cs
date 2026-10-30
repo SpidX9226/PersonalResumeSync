@@ -1,4 +1,5 @@
 using System.Data.Common;
+using backend.Middleware;
 using backend.Routes;
 using Npgsql;
 
@@ -11,12 +12,14 @@ public static class Program
         var builder = WebApplication.CreateBuilder(args);
         var config = builder.Configuration;
 
-        builder.Services.AddScoped<DbConnection>(_ =>
-            new NpgsqlConnection(config.GetConnectionString("Default"))
+        builder.Services.AddSingleton<NpgsqlDataSource>(_ =>
+            NpgsqlDataSource.Create(config.GetConnectionString("Default")!)
         );
         
         var app = builder.Build();
-        
+
+        app.UseUniqueVisits();
+
         app.MapRoutes();
         
         app.Run();

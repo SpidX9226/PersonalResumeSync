@@ -27,7 +27,7 @@
     text-decoration: none;
     border-radius: 6px;
 
-    transition: color 0.2s, background 0.2s;
+    transition: 0.5s ease-out;
 
     color: var(--muted);
   }
@@ -35,10 +35,6 @@
   &__link:hover {
     color: var(--text);
     background-color: var(--surface);
-  }
-
-  &.sidebar__link active {
-    color: var(--accent);
   }
 
   &__dot {
@@ -51,7 +47,7 @@
     border-radius: 50%;
     background-color: var(--muted);
 
-    transition: background-color 0.2s ease;
+    transition: background-color 0.5s ease-out;
 
     .sidebar__link:hover & {
     }
@@ -64,4 +60,5 @@
 
 .sidebar__link.active {
   color: var(--accent);
+  border-right: 2px solid var(--accent);
 }

@@ -101,7 +101,7 @@ export default function Hero() {
 
     return (
         <section
-            id="about"
+            id="hero"
             ref={ref}
             className={`hero${reduce ? " hero--static" : ""}`}
             style={{ "--header-height": `${HEADER_HEIGHT}px` } as CSSProperties}
