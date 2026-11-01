@@ -22,15 +22,12 @@
   padding: 10px 12px;
   text-decoration: none;
   border-radius: 6px;
-  transition: color 0.2s, background 0.2s;
+  transition: 0.5s ease-out;
   color: var(--muted);
 }
 .sidebar__link:hover {
   color: var(--text);
   background-color: var(--surface);
-}
-.sidebar .sidebar__link--active {
-  color: var(--accent);
 }
 .sidebar__dot {
   display: inline-block;
@@ -39,10 +36,15 @@
   flex-shrink: 0;
   border-radius: 50%;
   background-color: var(--muted);
-  transition: background-color 0.2s ease;
+  transition: background-color 0.5s ease-out;
 }
-.sidebar__link--active .sidebar__dot {
+.sidebar__link.active .sidebar__dot {
   background-color: var(--accent);
+}
+
+.sidebar__link.active {
+  color: var(--accent);
+  border-right: 2px solid var(--accent);
 }
 
 /*# sourceMappingURL=Sidebar.css.map */

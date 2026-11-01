@@ -11,6 +11,19 @@
   --header-color: rgba(11, 13, 16, 0.85);
 }
 
+[data-theme=apple-dark] {
+  color-scheme: dark;
+  --background: #000;
+  --surface: #1c1c1e;
+  --surface-hover: #3a3a3c;
+  --border: #1c1c1e;
+  --text: #fff;
+  --muted: #9d9da5;
+  --accent: rgb(109, 124, 255);
+  --accent-hover: rgb(167, 170, 255);
+  --header-color: rgba(0, 0, 0, 0.85);
+}
+
 [data-theme=light] {
   color-scheme: light;
   --background: #f7f8fa;
@@ -21,6 +34,19 @@
   --muted: #69707c;
   --accent: #e87524;
   --accent-hover: #c95f17;
+  --header-color: rgba(247, 248, 250, 0.85);
+}
+
+[data-theme=apple-light] {
+  color-scheme: light;
+  --background: #efeff4;
+  --surface: #fffffe;
+  --surface-hover: #eef0f4;
+  --border: #eef0f4;
+  --text: #000000;
+  --muted: #8b8a8e;
+  --accent: rgb(255, 214, 0);
+  --accent-hover: rgb(161, 106, 0);
   --header-color: rgba(247, 248, 250, 0.85);
 }
 
@@ -44,6 +70,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background);
   color: var(--text);
@@ -51,9 +81,56 @@ body {
   line-height: 1.6;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .container {
-  max-width: calc(80% - 260px);
+  width: min(1100px, 100% - 40px);
   margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.2s ease-out;
+}
+.btn.primary {
+  background-color: var(--accent);
+  color: var(--text);
+}
+.btn.primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-3px);
+}
+.btn.secondary {
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.btn.secondary:hover {
+  border: 1px solid var(--accent-hover);
+  background: var(--surface-hover);
+  transform: translateY(-3px);
+}
+
+.section {
+  padding: 120px 0;
+  border-top: 1px solid var(--border);
+}
+.section__label {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.section__title {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 42px;
+  letter-spacing: -1px;
 }
 
 /*# sourceMappingURL=global.css.map */

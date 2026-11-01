@@ -1,0 +1,40 @@
+.skills__row {
+  width: 100%;
+  margin-bottom: 10px;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+.skills__row__content {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.skills__row__content.left {
+  animation: scroll-left 40s linear infinite;
+}
+.skills__row__content.right {
+  animation: scroll-right 40s linear infinite;
+}
+
+.skills__row__content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=SkillsScroll.css.map */
